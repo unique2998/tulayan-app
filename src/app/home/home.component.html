@@ -1,0 +1,210 @@
+<div id="homePage">
+    <div class="bg-image"></div>
+    <div id="homePageContent" class="container-fluid home-page-container">
+    
+        <div class="row justify-content-md-center g-3">
+            
+            <div class="col-12">
+                
+                <div class="site-banner">
+                    <img src="assets/cover-wide.jpg" width="100%" />
+                    <div class="cover-caption">
+                        <div><h1>Welcome to Tulayan Dormitory</h1></div>
+                        <div><p>No Dorm? No Problem.<br> Rent With Us!</p></div>
+                    </div>
+                </div>
+                
+            </div>
+    
+            <div class="col-md-6">
+                <div class="transparent-black-background" style="height: 100%; padding: 20px">
+                    <h1 class="home-header-text" style="color: white">Tulayan Dormitory</h1>
+                    <p class="home-paragraph-contents" style="color: white">Tulayan Dormitory, A dormitory also called a residence hall or simply a “dorm" is a large building divided up into many rooms where college students live, often with a roommate or two. Dorm rooms are usually small, with just enough room for a couple of beds, a couple of desks and maybe a few small pieces of furniture.</p>
+                </div>
+                
+            </div>
+
+            <div class="col-md-6">
+                <swiper
+                [effect]="'coverflow'"
+                [navigation]="true"
+                [grabCursor]="true"
+                [centeredSlides]="true"
+                [autoplay]="{
+                delay: 2500,
+                disableOnInteraction: false
+                }"
+                [slidesPerView]="'auto'"
+                [coverflowEffect]="{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true
+                }"
+                [pagination]="true"
+                class="mySwiper"
+              >
+                <ng-template swiperSlide ><img src="assets/tulayan-dormitory-lobby.jpg" style="width: 100%" /></ng-template>
+                <ng-template swiperSlide ><img src="assets/tulayan-dormitory-lobby2.jpg" style="width: 100%" /></ng-template>
+                <ng-template swiperSlide ><img src="assets/tulayan-dormitory-room.jpg" style="width: 100%" /></ng-template>
+                <ng-template swiperSlide ><img src="assets/tulayan-dormitory-sink.jpg" style="width: 100%" /></ng-template>
+                <ng-template swiperSlide><img src="assets/tulayan-dormitory-hallway.jpg" style="width: 100%" /></ng-template>
+              </swiper>
+            </div>
+    
+            <div class="col-md-2 image-rounded-corners" >
+                
+                <div class="">
+                    <img src="assets/building2.jpg" />
+                </div>
+            </div>
+    
+            <div class="col-md-2 image-rounded-corners" >
+                <div class="">
+                    <img src="assets/building3.jpg" />
+                </div>
+            </div>
+    
+            <div class="col-md-2 image-rounded-corners" >
+                <div class="">
+                    <img src="assets/building4.jpg" />
+                </div>
+            </div>
+    
+    
+            <div class="col-md-2 image-rounded-corners" >
+                <div class="">
+                    <img src="assets/building5.jpg" />
+                </div>
+            </div>
+    
+            
+    
+            <div class="col-12 transparent-black-background">
+                
+                <p class="home-paragraph-contents" style="color: white">
+                    
+                    2 minutes walking distance  to NDMU or thinkers review center!<br>
+                    Corner La Demora St. & Dagohoy St. 967 Pantua Village<br>
+                    Zone 3, Koronadal City, 9506<br>
+                    For more inquiries contact us at:<br><br>
+                    Globe: 09171275490<br>
+                    Smart: 09088894042
+                </p>
+            </div>
+    
+        </div>
+        
+        
+    </div>
+</div>
+
+
+<div class="container-fluid home-page-container">
+
+    <div class="row g-5">
+
+        <!--div class="col-12" id="loginHere">
+            
+            <app-login></app-login>
+        </div -->
+
+        <!--div class="col-12">
+            <div class="center-content">
+                <a  href="#loginHere" id="loginLinkButton">Select Room</a>
+            </div>
+            
+
+        </div -->
+
+        <!--div class="col-12 box-shadow">
+            <swiper
+            [effect]="'coverflow'"
+            [navigation]="true"
+            [grabCursor]="true"
+            [centeredSlides]="true"
+            [autoplay]="{
+            delay: 2500,
+            disableOnInteraction: false
+            }"
+            [slidesPerView]="'auto'"
+            [coverflowEffect]="{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true
+            }"
+            [pagination]="true"
+            class="mySwiper"
+          >
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-lobby.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-lobby2.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-room.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-sink.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide><img src="assets/tulayan-dormitory-hallway.jpg" style="width: 100%" /></ng-template>
+          </swiper>
+        </div -->
+
+        <!--div>
+            <div class="col-sm-4 ">
+                <img class="box-shadow" src="assets/tulayan-dormitory-lobby2.jpg" style="width: 100%;" />
+            </div>
+            <div class="col-sm-4">
+                <img class="box-shadow" src="assets/tulayan-dormitory-sink.jpg" style="width: 100%;" />
+            </div>
+            <div class="col-sm-4 ">
+                <img class="box-shadow" src="assets/tulayan-dormitory-room.jpg" style="width: 100%;" />
+            </div>
+            <div class="col-12">
+                <p id="AboutUs" class="paragraph-background-white box-shadow" style="font-size: 20pt; line-height: normal ;">Tulayan Dormitory, A dormitory also called a residence hall or simply a “dorm" is a large building divided up into many rooms where college students live, often with a roommate or two. Dorm rooms are usually small, with just enough room for a couple of beds, a couple of desks and maybe a few small pieces of furniture.</p>
+            </div>
+            <div class="col-sm-6">
+                <p  style="font-size: 20pt; line-height: normal; text-align: left" class="paragraph-background-white box-shadow">
+                    Tulayan Dormitory
+                    <br><br>
+                    For Rent/Transient
+                    <br><br>
+                </p>
+                    <ul class="paragraph-background-white box-shadow">
+                    <li>1350 per head with free electricy and water</li>
+                    <li>23 rooms with 2/4 beds per room</li>
+                    <li>Common toilet & bath</li>
+                    <li>Common kitchen</li>
+                    <li>Other Add ons cost 200</li>
+                    <li>Wifi</li>
+                    <li>Electricfan</li>
+                    </ul>
+                    <p class="paragraph-large paragraph-background-white box-shadow">
+                        <br><br>
+                        2 minutes walking distance  to NDMU or thinkers review center!<br>
+                        Corner La Demora St. & Dagohoy St. 967 Pantua Village<br>
+                        Zone 3, Koronadal City, 9506
+                        <br><br>
+                        For more inquiries contact us at:<br>
+                        Globe: 09171275490<br>
+                        Smart: 09088894042
+                    </p>
+            </div>
+            <div class="col-sm-6">
+            
+                <img src="assets/tulayan-dormitory-lobby2.jpg" style="width: 100%;" />
+            </div>
+            <div class="col-12">
+                <p id="ContactUs"  style="font-size: 20pt; line-height: normal; text-align: left" class="paragraph-background-white box-shadow">
+                    Tulayan Ladies Dormitory FRVV+RF4, La Demora Street, Zone lll, Pantua Village, 9506, Koronadal City, South Cotabato<br><hr>
+                    Contact this number for inquiries:<br>
+                    GLOBE: 09161275490<br>
+                    SMART: 09088894042
+                </p>
+            </div>
+        </div -->
+
+        
+
+        
+    </div>
+
+
+</div>

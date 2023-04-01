@@ -1,0 +1,26 @@
+<h1  *ngIf="type == 'new'" mat-dialog-title>New Room</h1>
+<h1  *ngIf="type == 'update'" mat-dialog-title>Update Room</h1>
+<div mat-dialog-content>
+  <p>Please provide the following details?</p>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Unit Description</mat-label>
+    <input matInput [(ngModel)]="desc" [formControl]="unitDescriptionFormControl">
+    <mat-error *ngIf="unitDescriptionFormControl.hasError('required')">
+      Unit Description <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Image Filename</mat-label>
+    <input matInput [(ngModel)]="image">
+  </mat-form-field>
+
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" >No Thanks</button>
+  <button *ngIf="!unitDescriptionFormControl.hasError('required') && type == 'new'" mat-raised-button color="primary"  (click)="saveUnit()">Ok</button>
+  <button *ngIf="!unitDescriptionFormControl.hasError('required') && type == 'update'" mat-raised-button color="primary"  (click)="updateUnit()">Update</button>
+</div>
+

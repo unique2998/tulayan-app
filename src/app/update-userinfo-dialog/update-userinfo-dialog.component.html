@@ -1,0 +1,69 @@
+<h1 mat-dialog-title>Please update your information to proceed</h1>
+
+<div mat-dialog-content>
+  <div class="container-fluid">
+    <div class="row justify-content-md-center g-4">
+
+      <div class="col-12">
+        
+          
+          <input type="file" (change)="onFileSelected($event)" [formControl]="photoFormControl">
+          <mat-error *ngIf="photoFormControl.hasError('required')">
+              Profile Photo <strong>required</strong>
+          </mat-error>
+        
+      </div>
+
+      <div class="col-12">
+        <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput [(ngModel)]="address" [formControl]="addressFormControl">
+            <mat-error *ngIf="addressFormControl.hasError('required')">
+              Address <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+      </div>
+
+      <div class="col-12">
+        <mat-form-field appearance="fill">
+            <mat-label>Birth Date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="birth_date" [formControl]="birthDateFormControl">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-error *ngIf="birthDateFormControl.hasError('required')">
+              Birth Date is <strong>required</strong>
+            </mat-error>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+      </div>
+
+      <div class="col-12">
+        <mat-form-field appearance="fill">
+            <mat-label>Occupation</mat-label>
+            <mat-select  [(ngModel)]="occupation" [formControl]="occupationFormControl">
+              <mat-option *ngFor="let occupation of occupations" [value]="occupation.id">
+                {{ occupation.description }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="occupationFormControl.hasError('required')">
+              Occupation is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+      </div>
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" >No Thanks</button>
+  <button mat-raised-button color="primary" (click)="updateUserInfo()" >Save</button>
+</div>
+

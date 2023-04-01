@@ -1,0 +1,127 @@
+
+<div class="container-fluid text-center">
+
+    <div class="row">
+        <div class="col">
+            <!--div style="margin-bottom: 45px; text-align: center; font-size: 5rem; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; line-height: normal;">Tulayan Dormitory</div -->
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-sm-6">
+
+            <!--img src="assets/tulayan-dormitory.jpg" alt="Tulayan Dormitory" style="width: 100%;" /-->
+
+            <!--swiper
+            [effect]="'coverflow'"
+            [navigation]="true"
+            [grabCursor]="true"
+            [centeredSlides]="true"
+            [autoplay]="{
+            delay: 2500,
+            disableOnInteraction: false
+            }"
+            [slidesPerView]="'auto'"
+            [coverflowEffect]="{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true
+            }"
+            [pagination]="true"
+            class="mySwiper"
+          >
+            <ng-template swiperSlide ><img src="assets/321976692_868661554376319_6259653096366992375_n.png" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/318614638_872960897358544_6562583546812526324_n.png" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/322851301_904518937217615_1149717955892265311_n.png" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/324469409_924725191860516_8258259012268204612_n.png" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide><img src="assets/324882534_623764413085643_205228641221612613_n.png" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide><img src="assets/325329999_542295247948289_169001527197398241_n.png" style="width: 100%" /></ng-template>
+          </swiper -->
+
+
+
+
+            <swiper
+            [effect]="'coverflow'"
+            [navigation]="true"
+            [grabCursor]="true"
+            [centeredSlides]="true"
+            [autoplay]="{
+            delay: 2500,
+            disableOnInteraction: false
+            }"
+            [slidesPerView]="'auto'"
+            [coverflowEffect]="{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true
+            }"
+            [pagination]="true"
+            class="mySwiper"
+          >
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-lobby.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-lobby2.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-room.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide ><img src="assets/tulayan-dormitory-sink.jpg" style="width: 100%" /></ng-template>
+            <ng-template swiperSlide><img src="assets/tulayan-dormitory-hallway.jpg" style="width: 100%" /></ng-template>
+          </swiper>
+
+          <br>
+            
+            
+        </div>
+        <div class="col-sm-6">
+            
+            
+            
+
+            <form >
+
+                <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Please Log In for Reservations<br><br></mat-card-title>
+                    <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+
+                <p>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                      </mat-form-field>
+    
+                </p>
+    
+                <p>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput [(ngModel)]="password" type="password" [ngModelOptions]="{standalone: true}">
+                      </mat-form-field>
+    
+                </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" (click)="loginUser()">Login</button>
+                    <button mat-stroked-button color="primary" (click)="registerUser()">Register</button>
+                </mat-card-actions>
+                </mat-card>
+               
+
+
+    
+                
+                
+                  
+    
+                
+            </form>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,182 @@
+<div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12 col-xs-12" style="padding:  0;">
+          
+          <div class="tul-header" #tulayanNavbar>
+            <div class="tulayan-logo">
+              <a href="/" >
+                <img class="main-logo" src="assets/logo-new.jpg" height="60px"  />
+              </a>
+            </div>
+
+            <ul>
+              <!--li class="logo">
+                <a href="/">
+                  <img class="main-logo" src="assets/logo-new.jpg" height="60px"  />
+                </a>
+                
+              </li -->
+              
+              
+              
+              <li class="after-logo"   *ngIf="tokenVerified && userInfo.role_id == 2">
+                <a  aria-current="page" href="units-available">Rooms Available</a>
+              </li>
+              
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 2">
+                <a  aria-current="page" href="my-reservations">My Reservations</a>
+              </li>
+    
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 2">
+                <a  aria-current="page" href="my-bills">My Bills</a>
+              </li>
+    
+    
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="reservation-requests" >
+                  <div *ngIf="notifications > 0" [matBadge]="notifications" matBadgeColor="warn" matBadgeOverlap="true">Reservation Requests</div>
+                  <div *ngIf="notifications == 0">Reservation Requests</div>
+                </a>
+              </li>
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="tenants">Tenants</a>
+              </li>
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="units">Rooms</a>
+              </li>
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="users">Users</a>
+              </li>
+              <li class="after-logo"  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="particulars">Bill Particulars</a>
+              </li>
+              
+              
+              
+              <li class="after-logo" *ngIf="!tokenVerified"><a href="about-us">About Us</a></li>
+              <li class="after-logo" *ngIf="!tokenVerified"><a href="contact-us">Contact Us</a></li>
+              <li class="after-logo" *ngIf="!tokenVerified"><a href="rules-regulations">Rules & Regulations</a></li>
+              <li class="after-logo" *ngIf="!tokenVerified"> <a href="login">Login</a></li>
+              <li class="after-logo"  *ngIf="tokenVerified">
+                <a  href="javascript:void(0)">{{ userInfo.first_name }} {{ userInfo.last_name }} <!--span *ngIf="userInfo.role_id == 1">(Administrator)</span --></a>
+              </li>
+    
+    
+    
+              <li class="after-logo"  *ngIf="tokenVerified">
+                <a  href="javascript:void(0)" (click)="logoutUser()">Logout</a>
+              </li>
+            </ul>
+
+            <!--ul id="userNavbar" *ngIf="tokenVerified">
+              <li   *ngIf="tokenVerified && userInfo.role_id == 2">
+                <a  aria-current="page" href="units-available">Units Available</a>
+              </li>
+              
+              <li  *ngIf="tokenVerified && userInfo.role_id == 2">
+                <a  aria-current="page" href="my-reservations">My Reservations</a>
+              </li>
+    
+              <li  *ngIf="tokenVerified && userInfo.role_id == 2">
+                <a  aria-current="page" href="my-bills">My Bills</a>
+              </li>
+    
+    
+              <li  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="reservation-requests">Reservation Requests</a>
+              </li>
+              <li  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="tenants">Tenants</a>
+              </li>
+              <li  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="units">Units</a>
+              </li>
+              <li  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="users">Users</a>
+              </li>
+              <li  *ngIf="tokenVerified && userInfo.role_id == 1">
+                <a  aria-current="page" href="particulars">Bill Particulars</a>
+              </li>
+            </ul -->
+            
+          </div>
+          <div class="tul-header-center-items">
+            
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/logo.jpg" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 2">
+            <a class="nav-link active" aria-current="page" href="units-available">Units Available</a>
+          </li>
+          
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 2">
+            <a class="nav-link active" aria-current="page" href="my-reservations">My Reservations</a>
+          </li>
+
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 2">
+            <a class="nav-link active" aria-current="page" href="my-bills">My Bills</a>
+          </li>
+
+
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 1">
+            <a class="nav-link active" aria-current="page" href="reservation-requests">Reservation Requests</a>
+          </li>
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 1">
+            <a class="nav-link active" aria-current="page" href="tenants">Tenants</a>
+          </li>
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 1">
+            <a class="nav-link active" aria-current="page" href="units">Units</a>
+          </li>
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 1">
+            <a class="nav-link active" aria-current="page" href="users">Users</a>
+          </li>
+          <li class="nav-item" *ngIf="tokenVerified && userInfo.role_id == 1">
+            <a class="nav-link active" aria-current="page" href="particulars">Bill Particulars</a>
+          </li>
+          <li class="nav-item" *ngIf="!tokenVerified">
+            <a class="nav-link active" aria-current="page" href="/#AboutUs">About Us</a>
+          </li>
+          <li class="nav-item" *ngIf="!tokenVerified">
+            <a class="nav-link active" aria-current="page" href="/#ContactUs">Contact Us</a>
+          </li>
+          
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item" *ngIf="tokenVerified">
+            <a class="nav-link active" aria-current="page" href="javascript:void(0)">{{ userInfo.first_name }} {{ userInfo.last_name }} <span *ngIf="userInfo.role_id == 1">(Administrator)</span></a>
+          </li>
+
+
+
+          <li class="nav-item" *ngIf="tokenVerified">
+            <a class="nav-link active" aria-current="page" href="javascript:void(0)" (click)="logoutUser()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav -->
+<div class="router-outlet">
+  <router-outlet></router-outlet>
+</div>
+
+  

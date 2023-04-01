@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>New Tenant</h1>
+<div mat-dialog-content>
+  <p>Please provide the following details?</p>
+  
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select User</mat-label>
+    <mat-select  [(ngModel)]="user_id" [formControl]="userFormControl">
+      <mat-option *ngFor="let user of users" [value]="user.id">
+        {{user.last_name }}, {{ user.first_name }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="userFormControl.hasError('required')">
+      User is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Unit</mat-label>
+    <mat-select  [(ngModel)]="unit_id" [formControl]="unitFormControl">
+      <mat-option *ngFor="let unit of units" [value]="unit.id">
+        {{unit.desc}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="unitFormControl.hasError('required')">
+      Unit is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button  (click)="saveTenant()">Ok</button>
+</div>

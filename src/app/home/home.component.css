@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Playfair;
+    src: url('../../assets/PlayfairDisplay-Black.ttf');
+}
+
+
+
+#loginLinkButton{
+    text-decoration: none;
+    line-height: normal;
+    font-size: 24pt;
+    padding: 5px 30px 5px 30px;
+    border-radius: 24px;
+    background-color: #3f51b5;
+    color: white;
+}
+
+.center-content{
+    text-align: center;
+}
+
+.paragraph-large{
+    font-size: 20pt;
+    line-height: normal;
+}
+
+/*
+.home-page-container{
+    background-image: url('../../assets/cards.avif');
+    background-size: 300px;
+} */
+
+.paragraph-background-white{
+    background-color: #ffffffd4;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.box-shadow{
+    border: 3px solid white;
+    box-shadow: 0 0 16px 11px #00000094;
+}
+
+h1.home-header-text{
+    color: black;
+    text-align: center;
+    font-family: Montserrat;
+    line-height: 100px;
+}
+
+p.home-paragraph-contents,
+.home-list-contents li
+{
+    text-align: center;
+    line-height: normal;
+    font-family: Montserrat;
+}
+
+.home-list-contents li{
+    text-align: left;
+}
+
+.image-gallery{
+    padding: 20px;
+    box-shadow: 0 15px 15px 10px rgb(0 0 0 / 10%);
+}
+
+.image-gallery img{
+    width: 100%;
+}
+
+.image-rounded-corners img{
+    width: 100%;
+    border-radius: 5px;
+    
+} 
+
+/*
+.image-rounded-corners{
+    border-radius: 20px;
+    padding: 15px;
+    margin: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.329)
+} */
+
+/*
+.site-banner{
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.329)
+    
+}
+.site-banner img{
+    border-radius: 5px;
+    
+} */
+
+.site-banner{
+    position: relative;
+}
+
+
+
+.bg-image {
+    /* The image used */
+    background-image: url("../../assets/backdrop.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
+    
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #homePage{
+    position: relative;
+  }
+
+  #homePageContent{
+    position: relative;
+    top: 150px;
+  }
+
+  .cover-caption h1{
+    font-size: 5vw;
+    line-height: normal;
+    white-space: nowrap;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .cover-caption p{
+    font-size: 2vw;
+    text-align: center;
+    line-height: normal;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .cover-caption{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 50px 20px 50px 20px;
+    background-color: rgba(0, 0, 0, 0.362);
+  }
+
+  .transparent-black-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+
+  

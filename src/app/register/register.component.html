@@ -1,0 +1,92 @@
+<div class="container text-center">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-6">
+            
+
+            <form >
+
+                <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Register<br><br></mat-card-title>
+                    <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+
+                <p>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>First Name</mat-label>
+                        <input matInput [(ngModel)]="first_name"  [formControl]="firstnameFormControl">
+                        <mat-error *ngIf="firstnameFormControl.hasError('required')">
+                            First Name is <strong>required</strong>
+                          </mat-error>
+                    </mat-form-field>
+    
+                </p>
+
+                <p>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput [(ngModel)]="last_name"  [formControl]="lastnameFormControl">
+                        <mat-error *ngIf="lastnameFormControl.hasError('required')">
+                            Last Name is <strong>required</strong>
+                          </mat-error>
+                    </mat-form-field>
+    
+                </p>
+
+                <p>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput [(ngModel)]="email"  [formControl]="emailFormControl">
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+    
+                </p>
+
+                <p>
+
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Contact</mat-label>
+                        <input matInput type="contact" [(ngModel)]="contact"  [formControl]="contactFormControl">
+                        <mat-error *ngIf="contactFormControl.hasError('required')">
+                            Contact is <strong>required</strong>
+                          </mat-error>
+                      </mat-form-field>
+    
+                </p>
+    
+                <p>
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" [(ngModel)]="password" type="password"  [formControl]="passwordFormControl">
+                        <mat-error *ngIf="passwordFormControl.hasError('required')">
+                            Password is <strong>required</strong>
+                          </mat-error>
+                    </mat-form-field>
+    
+                </p>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" (click)="registerUser()">Register</button>
+                    <button mat-stroked-button color="primary" (click)="loginUser()">Back to Login</button>
+                </mat-card-actions>
+                </mat-card>
+               
+
+
+    
+                
+                
+                  
+    
+                
+            </form>
+        </div>
+    </div>
+</div>

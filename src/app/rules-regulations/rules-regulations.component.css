@@ -1,0 +1,49 @@
+
+
+#rulesRegulations{
+    position: relative;
+    padding-bottom: 200px;
+}
+
+#rulesRegulations ul{
+    list-style-type: none;
+}
+
+#rulesRegulations ul li:before {
+    content: '✓ ';
+}
+
+
+#rulesRegulations h1,
+#rulesRegulations p,
+#rulesRegulations li{
+    color: #fff;
+    font-family: Montserrat;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("../../assets/backdrop.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
+    
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .panel-transparent{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }

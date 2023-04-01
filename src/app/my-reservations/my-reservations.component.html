@@ -1,0 +1,66 @@
+<div class="container text-center">
+    <h2>My Reservations</h2>
+
+
+    <div class="table-responsive">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by ID"> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="img">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header > Image </th>
+                    <td mat-cell *matCellDef="let element"> <img src="assets/{{ element.image }}" width="200" style="margin: 20px" /> </td>
+                 </ng-container>
+            
+            
+            <ng-container matColumnDef="desc">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.desc}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status</th>
+                <td mat-cell *matCellDef="let element"> <span *ngIf="element.status == 1" >Requested</span> <span *ngIf="element.status == 2" >Approved</span><span *ngIf="element.status == 4" >Cancelled</span></td>
+              </ng-container>
+
+              <ng-container matColumnDef="payment">
+                <th mat-header-cell *matHeaderCellDef> Payment</th>
+                <td mat-cell *matCellDef="let element"> 
+                    <button class="btn-margin" *ngIf="element.status == 1" mat-stroked-button color="primary" (click)="uploadFileDialog(element.id)" >Upload Proof of Payment</button>
+                    <button class="btn-margin" *ngIf="element.status == 1 && element.receipt" mat-stroked-button color="primary" (click)="viewProofPayment(element.receipt)" >View Proof of Payment</button>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="options">
+                <th mat-header-cell *matHeaderCellDef> Options</th>
+                <td mat-cell *matCellDef="let element"> <button *ngIf="element.status == 1" mat-stroked-button color="primary" (click)="cancelReservation(element.id)">Cancel</button></td>
+              </ng-container>
+        
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+    </div>
+
+    
+</div>
+  
+  
+
+
+        
+
+        
+    
+    
+
+
+
+
+
+
+              

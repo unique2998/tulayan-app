@@ -1,0 +1,21 @@
+<h1  *ngIf="type == 'new'" mat-dialog-title>New Particular</h1>
+<h1  *ngIf="type == 'update'" mat-dialog-title>Update Particular</h1>
+<div mat-dialog-content>
+  <p>Please provide the following details?</p>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Particular Description</mat-label>
+    <input matInput [(ngModel)]="description" [formControl]="particularDescriptionFormControl">
+    <mat-error *ngIf="particularDescriptionFormControl.hasError('required')">
+      Particular Description <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" >No Thanks</button>
+  <button *ngIf="!particularDescriptionFormControl.hasError('required') && type == 'new'" mat-raised-button color="primary"  (click)="saveParticular()">Ok</button>
+  <button *ngIf="!particularDescriptionFormControl.hasError('required') && type == 'update'" mat-raised-button color="primary"  (click)="updateParticular()">Update</button>
+</div>
+

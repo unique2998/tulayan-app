@@ -1,0 +1,59 @@
+.about-us p,
+.about-us li{
+    line-height: normal;
+    font-family: Montserrat;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("../../assets/backdrop.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    
+    
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #aboutUs{
+    position: relative;
+  }
+
+  .about-us{
+    position: relative;
+    top: 50px;
+  }
+
+  .transparent-black-background{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+
+.home-list-contents li,
+.ul-style-none li
+{
+    text-align: left;
+    line-height: normal;
+    font-family: Montserrat;
+    color: #fff;
+}
+
+.ul-style-none{
+  list-style: none;
+  padding: 0;
+}
+
+.ul-align-center li{
+  text-align: center;
+}

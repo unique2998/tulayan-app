@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>Upload Proof of Payment</h1>
+
+<div mat-dialog-content>
+  <div class="container">
+    <div class="row justify-content-md-center g-4">
+
+      
+
+      <div class="col-12">
+
+        <div style="margin: 15px"><input type="file" (change)="onFileSelected($event)"></div>
+
+        <p style="text-align: center;">For online payment, use the following details:</p>
+        <p style="text-align: center;"><strong>GCash #: 09102455036</strong></p>
+        <div style="text-align: center;">
+          <img src="../../assets/payment-qr-code.jpg" width="250px" />
+        </div>
+        
+        
+      </div>
+
+      
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" >No Thanks</button>
+  <button mat-raised-button color="primary" (click)="uploadProofOfPayment()" >Save</button>
+</div>
+
